@@ -2,7 +2,14 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<script>document.documentElement.className+=' js';</script>
+<script>document.documentElement.className+=' js';
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('modal-mentions').style.display = 'none';
+  }
+});
+
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Géopi · Géomatique & géographie des risques</title>
 <style>
@@ -1565,9 +1572,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <p class="footer-notice">🚧 Ce site est en cours de construction&nbsp;: certains contenus peuvent encore évoluer.</p>
+    
     <span>Géopi · Géomatique & géographie des risques</span>
-    <span>Maquette · © 2026</span>
+    <span>© 2026 Géopi Conseil · Josselin Thonnelier · EI · SIREN 811 365 881 · <a href="#" onclick="document.getElementById('modal-mentions').style.display='flex';return false;" style="color:inherit;opacity:.7">Mentions légales</a></span>
   </div>
 </footer>
 
@@ -1802,5 +1809,87 @@ svg.leaflet-image-layer.leaflet-interactive path {
     });
   })();
 </script>
+
+
+<!-- MODAL MENTIONS LEGALES -->
+<div id="modal-mentions" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;align-items:center;justify-content:center;padding:1rem" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#fff;border-radius:8px;max-width:720px;width:100%;max-height:90vh;overflow-y:auto;position:relative;padding:2.5rem 2rem 2rem">
+    <button onclick="document.getElementById('modal-mentions').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#666;line-height:1">&times;</button>
+
+    <h2 style="font-size:1.4rem;font-weight:600;margin-bottom:1.75rem;color:#2a2a2a">Mentions légales</h2>
+
+    <div style="display:flex;flex-direction:column;gap:1.75rem">
+
+      <div>
+        <h3 style="font-size:11px;font-weight:700;color:#1D9E75;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.6rem">Éditeur du site</h3>
+        <p style="font-size:13.5px;color:#2a2a2a;line-height:1.8">
+          <strong>Géopi Conseil</strong><br>
+          Entrepreneur individuel · Josselin Thonnelier<br>
+          71 Boulevard Canton Coutain, 79180 Chauray, France<br>
+          SIREN : 811 365 881<br>
+          SIRET : 811 365 881 00028<br>
+          Code APE : 7490B · Activités spécialisées, scientifiques et techniques diverses<br>
+          Début d'activité : 01/08/2026<br>
+          Email : <a href="mailto:josselin.thonnelier@gmail.com" style="color:#1D9E75">josselin.thonnelier@gmail.com</a><br>
+          Téléphone : 06 32 32 78 13
+        </p>
+      </div>
+
+      <div>
+        <h3 style="font-size:11px;font-weight:700;color:#1D9E75;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.6rem">Hébergement</h3>
+        <p style="font-size:13.5px;color:#2a2a2a;line-height:1.8">
+          Ce site est hébergé par <strong>GitHub Pages</strong> (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis).
+          Site statique, aucune donnée n'est stockée sur les serveurs de l'hébergeur au-delà des logs de connexion standards.
+        </p>
+      </div>
+
+      <div>
+        <h3 style="font-size:11px;font-weight:700;color:#1D9E75;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.6rem">Propriété intellectuelle</h3>
+        <p style="font-size:13.5px;color:#2a2a2a;line-height:1.8">
+          L'ensemble du contenu de ce site (textes, visuels, structure) est la propriété de Géopi Conseil, sauf mention contraire.
+          Les outils et projets référencés sont publiés sous licences libres sur le dépôt GitHub
+          <a href="https://github.com/Aleas-territoire" target="_blank" rel="noopener" style="color:#1D9E75">Aleas-territoire</a>.
+          Les données cartographiques utilisées proviennent de sources ouvertes : IGN, OpenStreetMap, Copernicus, DRIAS.
+        </p>
+      </div>
+
+      <div>
+        <h3 style="font-size:11px;font-weight:700;color:#1D9E75;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.6rem">Données personnelles et formulaire de contact</h3>
+        <p style="font-size:13.5px;color:#2a2a2a;line-height:1.8">
+          Les données collectées via le formulaire de contact (nom, organisation, email, message) sont utilisées exclusivement
+          pour répondre à votre demande. Elles ne sont ni revendues, ni transmises à des tiers.
+          Conformément au RGPD (règlement UE 2016/679), vous disposez d'un droit d'accès, de rectification et de suppression
+          en contactant <a href="mailto:josselin.thonnelier@gmail.com" style="color:#1D9E75">josselin.thonnelier@gmail.com</a>.
+        </p>
+      </div>
+
+      <div>
+        <h3 style="font-size:11px;font-weight:700;color:#1D9E75;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.6rem">Cookies</h3>
+        <p style="font-size:13.5px;color:#2a2a2a;line-height:1.8">
+          Ce site n'utilise aucun cookie de tracking ou de publicité.
+          Les polices de caractères sont chargées localement ou depuis Google Fonts, ce chargement peut transmettre votre adresse IP à Google.
+          Aucune donnée de navigation n'est collectée ou analysée par Géopi Conseil.
+        </p>
+      </div>
+
+      <div>
+        <h3 style="font-size:11px;font-weight:700;color:#1D9E75;text-transform:uppercase;letter-spacing:.8px;margin-bottom:.6rem">Conditions générales de prestation</h3>
+        <p style="font-size:13.5px;color:#2a2a2a;line-height:1.8">
+          Toute prestation réalisée par Géopi Conseil fait l'objet d'un devis accepté par le client avant démarrage.
+          Les prestations sont réalisées en qualité d'entrepreneur individuel soumis au régime de la micro-entreprise.<br><br>
+          <strong>TVA non applicable · article 293 B du CGI.</strong><br><br>
+          Les livrables produits (cartes, données, scripts, rapports) sont transmis au client à l'issue de la mission.
+          Sauf mention contraire dans le devis, Géopi Conseil conserve la paternité des méthodes et outils développés.<br><br>
+          En cas de litige, les parties s'engagent à rechercher une solution amiable avant tout recours judiciaire.
+          Le tribunal compétent est celui du ressort de Niort (79).
+        </p>
+      </div>
+
+    </div>
+
+    <p style="font-size:11px;color:#888;margin-top:1.75rem">Dernière mise à jour : août 2026</p>
+  </div>
+</div>
+
 </body>
 </html>

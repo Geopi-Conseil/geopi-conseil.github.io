@@ -1275,6 +1275,17 @@ svg.leaflet-image-layer.leaflet-interactive path {
   .contact-phone .ico{width:1.05em;height:1.05em;flex:0 0 auto;}
   .contact-phone:hover{color:var(--teal-ink);}
   .contact-delay{margin-top:14px;font-size:13.5px;color:var(--ink-3);}
+  .doc-link{
+    display:inline-flex;align-items:center;gap:9px;margin-top:22px;
+    font-family:var(--display);font-weight:600;font-size:15px;
+    color:var(--teal);background:var(--surface);
+    border:1px solid var(--border);border-radius:7px;padding:11px 18px;
+    transition:border-color .15s ease,color .15s ease;
+  }
+  .doc-link .ico{width:18px;height:18px;flex:0 0 auto;}
+  .doc-link .doc-meta{font-weight:400;font-size:13px;color:var(--ink-3);}
+  .doc-link:hover,.doc-link:focus-visible{border-color:var(--teal);color:var(--teal-ink);}
+  .doc-link:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
   .contact-form{display:flex;flex-direction:column;gap:16px;max-width:520px;}
   .field{display:flex;flex-direction:column;gap:6px;}
   .field label{font-family:var(--sans);font-weight:600;font-size:13.5px;color:var(--ink);}
@@ -1366,6 +1377,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <h1 class="hero-headline"><span class="w-ts">Géopi</span> <span class="w-dh">est</span> <span class="w-dh">spécialisée</span> <span class="w-dh">dans</span> <span class="w-dh">le</span> <span class="w-dh">conseil</span> <span class="w-dh">et</span> <span class="w-dh">l'analyse</span> <span class="w-dh">en</span> <span class="w-ts">géomatique</span> <span class="w-dh">et</span> <span class="w-ts">géographie</span> <span class="w-ts">des</span> <span class="w-ts">risques.</span></h1>
       <div class="hero-actions">
         <a class="btn-primary" href="#contact">Prendre un rendez-vous</a>
+        <a class="btn-ghost" href="plaquette_geopi.pdf" target="_blank" rel="noopener">Découvrir notre plaquette (PDF)</a>
       </div>
     </div>
     <div class="hero-map" id="hero-slideshow" aria-roledescription="diaporama" aria-label="Exemples de cartes réalisées par Géopi">
@@ -1532,6 +1544,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
           <span>06&nbsp;32&nbsp;32&nbsp;78&nbsp;13</span>
         </a>
         <p class="contact-delay">Nous vous répondons sous 48h.</p>
+        <a class="doc-link" href="plaquette_geopi.pdf" download="Plaquette_Geopi.pdf" aria-label="Télécharger la plaquette de présentation Géopi (PDF, 0,7 Mo)">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.4l3.3 3.3V4a1 1 0 0 1 1-1zM5 19h14a1 1 0 1 1 0 2H5a1 1 0 1 1 0-2z"/>
+          </svg>
+          <span>Télécharger notre plaquette <span class="doc-meta">PDF · 0,7&nbsp;Mo</span></span>
+        </a>
       </div>
       <form class="contact-form" id="contact-form" novalidate>
         <div class="field">

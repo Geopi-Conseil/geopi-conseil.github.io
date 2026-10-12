@@ -78,7 +78,7 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;color:var(--ink)}
 p{margin:0}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
@@ -193,6 +193,7 @@ p{margin:0}
 
 /* ---- réalisations ---- */
 .feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(28px,4vw,44px)}
+.feature.rev{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr)}
 .feature.rev .f-text{order:2}
 .eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text)}
 .eyebrow svg{width:14px;height:14px}
@@ -316,7 +317,7 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
   .nav.open{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px var(--gutter) 16px}
   .svc-grid,.tools,.expert-grid{grid-template-columns:minmax(0,1fr)}
   .tools{gap:16px}
-  .feature,.about,.contact-grid{grid-template-columns:minmax(0,1fr)}
+  .feature,.feature.rev,.about,.contact-grid{grid-template-columns:minmax(0,1fr)}
   .feature.rev .f-text{order:0}
   .faq{grid-template-columns:minmax(0,1fr)}
   .faq-col + .faq-col{border-top:0}

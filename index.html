@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Géopi Conseil · Géomatique et prévention des risques · Deux-Sèvres</title>
-<meta name="description" content="Géopi Conseil, à Chauray (Deux-Sèvres) : géomatique, analyse des risques, réglementation (PPR, PCA), audits de vulnérabilité du bâtiment au bassin versant, et formations SIG.">
+<meta name="description" content="Géopi Conseil, à Chauray (Deux-Sèvres) : données et cartographie, analyse des risques, réglementation (PPR, PCA) et diagnostics de vulnérabilité du bâtiment au bassin versant, sensibilisation et formation.">
 <link rel="canonical" href="https://geopi-conseil.github.io/">
 <meta name="theme-color" content="#2f7470">
 <meta property="og:type" content="website">
@@ -81,38 +81,39 @@
   "Plan communal de sauvegarde (PCS)",
   "Diagnostic de vulnérabilité",
   "Adaptation au changement climatique",
+  "Sensibilisation aux risques",
   "Formation SIG"
  ],
  "hasOfferCatalog": {
   "@type": "OfferCatalog",
-  "name": "Domaines d'intervention",
+  "name": "Offre de services",
   "itemListElement": [
    {
     "@type": "Offer",
     "itemOffered": {
      "@type": "Service",
-     "name": "Géomatique"
+     "name": "Données & cartographie"
     }
    },
    {
     "@type": "Offer",
     "itemOffered": {
      "@type": "Service",
-     "name": "Géomatique et risques"
+     "name": "Analyse des risques & aide à la décision"
     }
    },
    {
     "@type": "Offer",
     "itemOffered": {
      "@type": "Service",
-     "name": "Réglementation des risques et audits de vulnérabilité"
+     "name": "Réglementation & diagnostics de vulnérabilité"
     }
    },
    {
     "@type": "Offer",
     "itemOffered": {
      "@type": "Service",
-     "name": "Sensibilisation et formations SIG"
+     "name": "Sensibilisation & formation"
     }
    }
   ]
@@ -251,7 +252,7 @@ p{margin:0}
 .sec-head p{color:var(--ink-2);margin-top:12px;max-width:60ch}
 
 /* ---- services ---- */
-.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .svc{padding:26px 24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);display:flex;flex-direction:column;gap:12px;scroll-margin-top:96px}
 .svc .ic{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent-text);display:grid;place-items:center}
 .svc .ic svg{width:22px;height:22px}
@@ -285,10 +286,29 @@ p{margin:0}
 .usages{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding-top:12px;border-top:1px solid var(--line)}
 .usages .lbl{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-right:6px}
 .usages span:not(.lbl){font-size:13px;color:var(--ink);background:var(--accent-soft);border-radius:999px;padding:3px 11px}
+.svc-top{display:flex;align-items:center;gap:14px}
+.svc dl{margin:4px 0 0;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.svc dl div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.svc dt{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding-top:2px}
+.svc dd{margin:0;font-size:14.5px;color:var(--ink)}
+.svc dd a{color:var(--accent-text);text-decoration:underline;text-underline-offset:3px}
+.svc dd a:hover{color:var(--accent)}
+.svc .more{font-family:var(--f-display);font-weight:500;font-size:14px;color:var(--accent-text);align-self:flex-start}
+.svc .more:hover{text-decoration:underline}
+.svc-tag{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-family:var(--f-display);font-weight:500;font-size:12.5px;color:var(--accent-text);background:var(--accent-soft);border-radius:999px;padding:3px 11px 3px 8px}
+.svc-tag svg{width:13px;height:13px}
+.tool .svc-tag{margin-inline:4px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:st}
+.steps li{position:relative;display:flex;flex-direction:column;gap:8px;padding:22px 20px 20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);counter-increment:st}
+.steps li::before{content:"0" counter(st);font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;color:var(--accent-text)}
+.steps li:not(:last-child)::after{content:"";position:absolute;top:31px;right:-21px;width:20px;height:1px;background:var(--line)}
+.steps h3{font-weight:600;font-size:17px}
+.steps p{font-size:14.5px;color:var(--ink-2)}
 .svc .tags span{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-3);border:1px solid var(--line);border-radius:6px;padding:2px 7px}
 
 
 /* ---- réalisations ---- */
+.feature,.tool{scroll-margin-top:96px}
 .feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(28px,4vw,44px)}
 .feature.rev{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr)}
 .feature.rev .f-text{order:2}
@@ -413,6 +433,8 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
   .menu-btn{display:inline-flex}
   .nav.open{display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px var(--gutter) 16px}
   .svc-grid,.tools,.expert-grid{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps li::after{display:none}
   .tools{gap:16px}
   .feature,.feature.rev,.about,.contact-grid{grid-template-columns:minmax(0,1fr)}
   .feature.rev .f-text{order:0}
@@ -421,6 +443,8 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
 }
 @media (min-width:640px) and (max-width:960px){.tools{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .svc dl div{grid-template-columns:minmax(0,1fr);gap:2px}
   .reg li{grid-template-columns:minmax(0,1fr);gap:2px}
   .stage{aspect-ratio:4/3}
   form.cf{grid-template-columns:minmax(0,1fr)}
@@ -435,7 +459,8 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Géopi, accueil"><img src="img/logo.webp" width="481" height="187" decoding="async" alt="GÉOPI"></a>
     <nav class="nav" id="nav" aria-label="Navigation principale">
-      <a href="#services">Services</a>
+      <a href="#services">Offre</a>
+      <a href="#methode">Méthode</a>
       <a href="#realisations">Réalisations</a>
       <a href="#a-propos">À propos</a>
       <a href="#faq">Questions</a>
@@ -463,10 +488,11 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
     </div>
     <h1>Comprendre, cartographier et prévenir les risques,<br> du&nbsp;bâtiment aux <span class="hand">territoires</span>.</h1>
     <p class="lede">
-      Trois expertises au service de vos projets&nbsp;: la
-      <a class="chip" href="#svc-geomatique"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/></svg></i>géomatique</a> pour valoriser vos données, l'expertise
-      <a class="chip" href="#svc-risques"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 19c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 3v7m-3-3 3 3 3-3"/></svg></i>risques</a> pour diagnostiquer la vulnérabilité de vos biens et appliquer la réglementation, et la
-      <a class="chip" href="#svc-formations"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></i>formation</a> pour rendre vos équipes autonomes.
+      Quatre expertises pour vos projets&nbsp;:
+      <a class="chip" href="#svc-donnees"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/></svg></i>données &amp; cartographie</a> pour valoriser vos données,
+      <a class="chip" href="#svc-risques"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 19c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 3v7m-3-3 3 3 3-3"/></svg></i>analyse des risques</a> pour éclairer vos décisions,
+      <a class="chip" href="#svc-reglementation"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></i>réglementation &amp; diagnostics</a> pour réduire la vulnérabilité de vos biens, et
+      <a class="chip" href="#svc-formation"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></i>sensibilisation &amp; formation</a> pour rendre vos équipes autonomes.
     </p>
     <div class="hero-actions">
       <a class="btn btn-solid" href="#contact">Prendre rendez-vous <span class="arr">→</span></a>
@@ -498,38 +524,61 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
     </ul>
   </section>
 
-  <!-- SERVICES -->
+  <!-- OFFRE -->
   <section class="wrap" id="services">
-    <div class="divider">Nos services</div>
+    <div class="divider">Notre offre</div>
     <div class="sec-head">
-      <h2>Nos domaines d'intervention</h2>
-      <p>Vous avez une idée qui mobiliserait des données géospatiales, ou une question qui demande une connaissance fine des risques&nbsp;? Nous intervenons sur quatre volets complémentaires.</p>
+      <h2>Quatre services complémentaires</h2>
+      <p>De la donnée géographique à la décision, et de la réglementation à la formation de vos équipes&nbsp;: chaque service peut être mobilisé seul ou combiné aux autres.</p>
     </div>
     <div class="svc-grid">
-      <article class="svc" id="svc-geomatique">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/></svg></span>
-        <h3>Géomatique</h3>
-        <p>Acquisition, traitement, analyse et valorisation de vos données géographiques. Cartographie, indicateurs décisionnels et restitutions claires, pensées pour être lues et réutilisées par vos équipes.</p>
-        <div class="tags"><span>QGIS</span><span>Python</span><span>Webmaps</span><span>Bases de données</span></div>
+      <article class="svc" id="svc-donnees">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/></svg></span><h3>Données &amp; cartographie</h3></div>
+        <p>Acquisition, traitement, structuration et valorisation de vos données géographiques, restituées sous une forme lisible et réutilisable par vos équipes.</p>
+        <dl>
+          <div><dt>Pour qui</dt><dd>Collectivités, bureaux d'études, entreprises, services data</dd></div>
+          <div><dt>Vous obtenez</dt><dd>Bases de données, cartes, webmaps, tableaux de bord, scripts et plugins</dd></div>
+          <div><dt>Exemple</dt><dd><a href="#ref-bdtopo">Extracteur BD TOPO IGN</a> · <a href="#ref-meteole">plugin Meteole</a></dd></div>
+        </dl>
+        <div class="tags"><span>Cartographie</span><span>Bases de données</span><span>Webmaps</span><span>Indicateurs</span></div>
       </article>
       <article class="svc" id="svc-risques">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 19c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 3v7m-3-3 3 3 3-3"/></svg></span>
-        <h3>Géomatique &amp; risques</h3>
-        <p>Évaluation de la vulnérabilité des territoires et des enjeux face aux risques naturels et technologiques&nbsp;: cartographie d'aléas, exposition des enjeux, aide à la décision en prévention et en gestion de crise.</p>
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 19c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 3v7m-3-3 3 3 3-3"/></svg></span><h3>Analyse des risques &amp; aide à la décision</h3></div>
+        <p>Évaluation de l'exposition des territoires et des enjeux aux risques naturels et technologiques, aujourd'hui et dans le climat futur, pour éclairer la prévention et la gestion de crise.</p>
+        <dl>
+          <div><dt>Pour qui</dt><dd>Collectivités, services de secours, assureurs, entreprises</dd></div>
+          <div><dt>Vous obtenez</dt><dd>Études, cartes d'aléas et d'enjeux, estimations de dommages, indicateurs climatiques</dd></div>
+          <div><dt>Exemple</dt><dd><a href="#ref-climat">Climat 2050</a> · <a href="#ref-saintes">dommages d'inondation à Saintes</a></dd></div>
+        </dl>
         <div class="tags"><span>Inondation</span><span>Chaleur</span><span>Sécheresse</span><span>Feux de forêt</span></div>
       </article>
-      <article class="svc" id="svc-formations">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>
-        <h3>Sensibilisation &amp; formations</h3>
-        <p>Montée en compétences de vos équipes sur les outils SIG et la donnée géographique. Ateliers, formations sur mesure et accompagnement pour gagner en autonomie sur vos propres jeux de données.</p>
+      <article class="svc" id="svc-reglementation">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><h3>Réglementation &amp; diagnostics de vulnérabilité</h3></div>
+        <p>Application des obligations réglementaires et diagnostics de vulnérabilité, du bâtiment au bassin versant, pour des usages résidentiels, économiques, industriels ou agricoles.</p>
+        <dl>
+          <div><dt>Pour qui</dt><dd>Collectivités, entreprises, exploitations agricoles, gestionnaires d'ERP</dd></div>
+          <div><dt>Vous obtenez</dt><dd>Rapports d'audit avec préconisations, analyses réglementaires, éligibilité au Fonds Barnier</dd></div>
+          <div><dt>Exemple</dt><dd><a href="#ref-lexalea">Lexaléa, obligations du PPRi bâtiment par bâtiment</a></dd></div>
+        </dl>
+        <div class="tags"><span>PPR</span><span>PCA</span><span>PCS · DICRIM</span><span>Fonds Barnier</span></div>
+        <a class="more" href="#reglementation-detail">Voir le détail du service ↓</a>
+      </article>
+      <article class="svc" id="svc-formation">
+        <div class="svc-top"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span><h3>Sensibilisation &amp; formation</h3></div>
+        <p>Sensibilisation aux risques naturels et technologiques, formations SIG et géomatique sur mesure, et accompagnement de vos équipes vers l'autonomie.</p>
+        <dl>
+          <div><dt>Pour qui</dt><dd>Élus, agents, salariés, habitants, services de secours</dd></div>
+          <div><dt>Vous obtenez</dt><dd>Sessions de sensibilisation, formations SIG adaptées à vos données, supports pédagogiques, accompagnement après la formation</dd></div>
+          <div><dt>Exemple</dt><dd>Prise en main de QGIS sur vos propres jeux de données</dd></div>
+        </dl>
         <div class="tags"><span>Ateliers</span><span>Sur mesure</span><span>Autonomie</span></div>
       </article>
     </div>
 
-    <div class="expert" id="svc-reglementation">
+    <div class="expert" id="reglementation-detail">
       <div class="expert-head">
-        <span class="eyebrow">Expertise risques</span>
-        <h3>Réglementation &amp; audits de vulnérabilité</h3>
+        <span class="eyebrow">Zoom sur un service</span>
+        <h3>Réglementation &amp; diagnostics de vulnérabilité</h3>
         <p>Au-delà de la cartographie, nous vous aidons à appliquer les obligations réglementaires et à mesurer concrètement la vulnérabilité de vos biens et de vos activités.</p>
       </div>
       <div class="expert-grid">
@@ -543,7 +592,7 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
           </ul>
         </div>
         <div class="expert-col">
-          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-6h4v6"/></svg>Audits techniques de vulnérabilité</h4>
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-6h4v6"/></svg>Diagnostics de vulnérabilité</h4>
           <p>Des diagnostics adaptés à chaque échelle, du bâtiment au bassin versant&nbsp;:</p>
           <ol class="ladder">
             <li><span class="node" aria-hidden="true"></span><div><b>Bâtiment</b><span>Diagnostic de vulnérabilité, zone refuge, mesures de réduction de la vulnérabilité.</span></div></li>
@@ -558,6 +607,21 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
 
   </section>
 
+  <!-- MÉTHODE -->
+  <section class="wrap" id="methode">
+    <div class="divider">Méthode</div>
+    <div class="sec-head">
+      <h2>Comment se déroule une mission</h2>
+      <p>Une démarche simple, du premier échange à la reprise des livrables par vos équipes.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Premier échange</h3><p>Vous nous exposez votre besoin par téléphone ou via le formulaire. Nous vous répondons sous 48&nbsp;h.</p></li>
+      <li><h3>Proposition &amp; devis</h3><p>Nous précisons ensemble le périmètre, les données et les livrables. La mission démarre après acceptation du devis.</p></li>
+      <li><h3>Analyse &amp; production</h3><p>Traitements, analyses et production des livrables, sur des méthodes documentées et des données sourcées.</p></li>
+      <li><h3>Livraison &amp; transfert</h3><p>Remise des livrables, des données et de la méthode, avec l'accompagnement nécessaire pour que vos équipes les reprennent.</p></li>
+    </ol>
+  </section>
+
   <!-- RÉALISATIONS -->
   <section class="wrap" id="realisations">
     <div class="divider">Réalisations</div>
@@ -566,9 +630,10 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
       <p>Webmaps, tableaux de bord et plugins&nbsp;: chaque outil est documenté et publié pour que vos équipes puissent le reprendre.</p>
     </div>
 
-    <article class="feature">
+    <article id="ref-lexalea" class="feature">
       <div class="f-text">
         <div class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/></svg>Webmap · PPRi inondation <span class="badge">En cours</span></div>
+        <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>Réglementation &amp; diagnostics</span>
         <h3>Lexaléa, mes obligations face au risque inondation</h3>
         <p>Le PPRi de Quint-Fonsegrives (Haute-Garonne) traduit bâtiment par bâtiment&nbsp;: zone réglementaire, zone refuge, diagnostic de vulnérabilité, règles de travaux et éligibilité au Fonds Barnier. Trois parcours&nbsp;: habitants, élus, services techniques.</p>
         <div class="metrics"><span><b>257</b>bâtiments analysés</span><span><b>5</b>zones réglementaires</span><span><b>3</b>parcours</span></div>
@@ -578,9 +643,10 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
       <a class="f-media" href="https://geopi-conseil.github.io/lexalea-quint/" target="_blank" rel="noopener" aria-label="Ouvrir Lexaléa"><img src="img/ref_lexalea.webp" width="820" height="551" decoding="async" loading="lazy" alt="Capture d'écran de la webmap Lexaléa à Quint-Fonsegrives"></a>
     </article>
 
-    <article class="feature rev">
+    <article id="ref-climat" class="feature rev">
       <div class="f-text">
         <div class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/><path d="M12 9v7"/></svg>Webmap · Climat</div>
+        <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 19c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 3v7m-3-3 3 3 3-3"/></svg>Analyse des risques</span>
         <h3>Climat 2050, les aléas climatiques dominants</h3>
         <p>Chaleur, sécheresse, feux de forêt et pluies extrêmes&nbsp;: quels départements et quelles intercommunalités de l'Hexagone seront les plus exposés à +2,7&nbsp;°C (2050) et +4&nbsp;°C (2100)&nbsp;? Deux modes de lecture, basculement par rapport à 1976-2005 ou classement entre territoires.</p>
         <div class="metrics"><span><b>4</b>aléas</span><span><b>2050 · 2100</b>horizons TRACC</span><span><b>8 km</b>grille SAFRAN</span></div>
@@ -590,9 +656,10 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
       <a class="f-media alt" href="https://geopi-conseil.github.io/climat-2050-france/" target="_blank" rel="noopener" aria-label="Ouvrir Climat 2050"><img src="img/ref_climat.webp" width="840" height="480" decoding="async" loading="lazy" alt="Capture d'écran de la webmap Climat 2050 des aléas climatiques dominants"></a>
     </article>
 
-    <article class="feature">
+    <article id="ref-saintes" class="feature">
       <div class="f-text">
         <div class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>Tableau de bord · Inondation</div>
+        <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 19c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 3v7m-3-3 3 3 3-3"/></svg>Analyse des risques</span>
         <h3>Estimation des dommages d'inondation à Saintes</h3>
         <p>Évaluation des dommages aux bâtiments lors de l'inondation de la Charente en février 2026, avec filtres par niveau d'impact et par usage.</p>
         <div class="metrics"><span><b>1 831</b>bâtiments impactés</span><span><b>~85 M€</b>estimés</span><span><b>02/2026</b>crue de la Charente</span></div>
@@ -605,24 +672,27 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
 
     <div class="more-head"><h3>Outils et plugins en accès libre</h3><span>3 projets</span></div>
     <div class="tools">
-      <a class="tool" href="https://geopi-conseil.github.io/risko.V1/" target="_blank" rel="noopener">
+      <a id="ref-risko" class="tool" href="https://geopi-conseil.github.io/risko.V1/" target="_blank" rel="noopener">
         <img src="img/ref_risko.webp" width="820" height="538" decoding="async" loading="lazy" alt="Capture d'écran de la webmap Risko">
         <span class="eyebrow">Webmap · Ressource en eau</span>
         <h4>Risko</h4>
+        <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 15c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M2 19c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2"/><path d="M12 3v7m-3-3 3 3 3-3"/></svg>Analyse des risques</span>
         <p>Sécheresses récentes (2019-2024) et volumes d'eau prélevés par bassin versant, avec la situation VigiEau en direct.</p>
         <span class="go">Ouvrir la webmap <span class="arr">→</span></span>
       </a>
-      <a class="tool" href="https://github.com/Aleas-territoire/meteole_qgis_plugin" target="_blank" rel="noopener">
+      <a id="ref-meteole" class="tool" href="https://github.com/Aleas-territoire/meteole_qgis_plugin" target="_blank" rel="noopener">
         <img src="img/ref_meteole.webp" width="817" height="672" decoding="async" loading="lazy" alt="Capture d'écran du plugin Meteole dans QGIS">
         <span class="eyebrow">Plugin QGIS</span>
         <h4>Meteole</h4>
+        <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/></svg>Données &amp; cartographie</span>
         <p>Les données Météo-France (AROME, ARPEGE) dans QGIS, adossées à la librairie Python Méteole de la MAIF.</p>
         <span class="go">Voir le dépôt GitHub <span class="arr">→</span></span>
       </a>
-      <a class="tool" href="https://aleas-territoire.github.io/ign-wfs-extractor/" target="_blank" rel="noopener">
+      <a id="ref-bdtopo" class="tool" href="https://aleas-territoire.github.io/ign-wfs-extractor/" target="_blank" rel="noopener">
         <img src="img/ref_bdtopo.webp" width="787" height="665" decoding="async" loading="lazy" alt="Capture d'écran de l'extracteur BD TOPO IGN">
         <span class="eyebrow">Outil web · WFS</span>
         <h4>Extracteur BD TOPO IGN</h4>
+        <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5z"/><path d="m2 13 10 5 10-5"/></svg>Données &amp; cartographie</span>
         <p>Extraction par commune depuis la BD TOPO via WFS&nbsp;: choix de couche, filtrage spatial, export GeoJSON.</p>
         <span class="go">Ouvrir l'outil <span class="arr">→</span></span>
       </a>
@@ -666,7 +736,7 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
         <details><summary>Réalisez-vous des diagnostics de vulnérabilité&nbsp;?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Oui, à plusieurs échelles&nbsp;: bâtiment, site d'activité ou exploitation agricole, commune ou intercommunalité, bassin versant, pour des usages résidentiels, économiques, industriels ou agricoles.</p></details>
       </div>
       <div class="faq-col">
-        <details><summary>Proposez-vous des formations&nbsp;?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Oui&nbsp;: ateliers, formations sur mesure et accompagnement pour que vos équipes gagnent en autonomie sur leurs propres jeux de données.</p></details>
+        <details><summary>Proposez-vous de la sensibilisation ou des formations&nbsp;?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Oui&nbsp;: sensibilisation aux risques naturels et technologiques, formations SIG et géomatique sur mesure, ateliers et accompagnement pour que vos équipes gagnent en autonomie sur leurs propres jeux de données.</p></details>
         <details><summary>Où intervenez-vous&nbsp;?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Géopi est basé à Chauray (Deux-Sèvres). Nos réalisations couvrent des territoires de toute la France métropolitaine.</p></details>
         <details><summary>Comment démarrer un projet&nbsp;?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Écrivez-nous via le formulaire ou appelez directement. Nous répondons sous 48&nbsp;h pour convenir d'un premier échange.</p></details>
         <details><summary>Pouvez-vous nous accompagner sur un PPR ou un PCA&nbsp;?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Oui&nbsp;: lecture du zonage et du règlement d'un PPR, identification des obligations pour vos bâtiments et vos projets, et préparation d'un plan de continuité d'activité face aux risques.</p></details>
@@ -694,12 +764,11 @@ dialog.legal::backdrop{background:rgba(10,20,19,.55)}
         <div class="field full"><label for="cf-subject">Objet de la demande</label>
           <select id="cf-subject" name="subject" required>
             <option value="" disabled selected>Sélectionnez…</option>
-            <option>Expertise en géomatique</option>
-            <option>Expertise en géomatique et risques</option>
-            <option>Expertise en risques</option>
-            <option>Réglementation des risques (PPR, PCA…)</option>
-            <option>Audit de vulnérabilité</option>
-            <option>Formation</option>
+            <option>Données &amp; cartographie</option>
+            <option>Analyse des risques &amp; aide à la décision</option>
+            <option>Réglementation &amp; diagnostics de vulnérabilité</option>
+            <option>Sensibilisation &amp; formation</option>
+            <option>Autre demande</option>
           </select></div>
         <div class="field full"><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" required></textarea></div>
         <div class="hp" aria-hidden="true"><label for="cf-website">Ne pas remplir ce champ</label><input id="cf-website" name="website" tabindex="-1" autocomplete="off"></div>
